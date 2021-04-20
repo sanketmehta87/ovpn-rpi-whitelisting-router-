@@ -1,0 +1,39 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+allow-hotplug eth0
+iface eth0 inet dhcp
+#bridge_ports eth0 wlan0
+
+auto wlan0
+iface wlan0 inet static
+	address 162.168.5.1
+	netmask 255.255.255.0
+	network 162.168.5.0
+	broadcast 162.168.5.255
+
+allow-hotplug wlan1
+iface wlan1 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+auto tun0
+iface tun0 inet static
+	address 170.20.20.1
+	netmask 255.255.240.0
+	network 170.20.20.0
+	broadcast 170.20.20.255
+
+#auto brTun
+#iface brTun inet static
+#	bridge_ports wlan0 tun0
+#	address 142.168.5.1
+#        netmask 255.255.255.0
+#        network 142.168.5.0
+#        broadcast 142.168.5.255
+
+
