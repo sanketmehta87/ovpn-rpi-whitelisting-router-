@@ -32,3 +32,6 @@ sudo systemctl restart dnsmasq.service
 sudo systemctl restart openvpn.service 
 
 ```
+Donate on btc:
+bc1qcf5nfy2kf8apk6vmklgl9mr4qhueld32awffvq
+Or coinbase @sunmeta Wallet.
