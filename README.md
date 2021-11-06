@@ -34,7 +34,7 @@ sudo systemctl restart dnsmasq.service
 sudo systemctl restart openvpn.service 
 
 ```
-Donate on eth:
+Donate on USDC or eth:
 0x35B22e17c06F15a9c2D05C0947a48288AD8d9bb8
 btc:
 bc1qcf5nfy2kf8apk6vmklgl9mr4qhueld32awffvq
