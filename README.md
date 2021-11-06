@@ -1,9 +1,11 @@
+
 ## Using OpenVPN and RaspberryPI to create plug-n-play URL whitelist filtered + tunneled hotspot.
 
 Basic idea here is. Attach a USB wireless-adapter |or| ethernet cable to RPI. Power on the device. And the new hotspot created acts as tunneled + filtered router.
 
 Internally it automatically connects eth0/wlan1 to OpenVPN tunnel on boot. Then uses default wlan0 (inbuilt wireless adapter) to create a hotspot. Piping traffic from hotspot to OVPN tunnel. In between we use iptables rules to filter out traffic based on DNS 52 port ACCEPT/DROP rules.
 
+![repo](https://user-images.githubusercontent.com/80457775/140620877-d64ed737-3d7e-4e19-9a35-4a248ee322bf.JPG)
 ![repo](https://github.com/sanketmehta87/ovpn-rpi-whitelisting-router-/blob/main/turning.png?raw=true)
 
 Some of the links that I refered to create this configurations. All this files along with same directory names resides inside `/etc/` folder of raspbian os.
